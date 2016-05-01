@@ -1,5 +1,4 @@
 #! /usr/bin/env python3
-# This is me learning some python
 
 from os.path import ismount
 from sys import argv
@@ -36,7 +35,7 @@ if user_input == 'mount':
         else:
             print('No connection to NFS server. Master!')
 
-if user_input == 'unmount' or 'umount':
+if user_input == 'unmount':
     if is_mounted:
         if ping_status:
             call(['sudo', 'umount', '/mnt/NFS/plex'])
