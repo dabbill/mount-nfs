@@ -1,4 +1,5 @@
 #! /usr/bin/env python3
+# This is me learning some python
 
 from os.path import ismount
 from sys import argv
