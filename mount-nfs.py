@@ -11,7 +11,7 @@ def server_status(nfs_host):
         return not response
 
 
-user_input = str(argv[1])
+user_input1 = str(argv[1])
 
 host = '192.168.1.10'
 mnt = '/mnt/NFS/'
@@ -22,7 +22,7 @@ ping_status = server_status(host)
 
 is_mounted = ismount('/mnt/NFS/plex')
 
-if user_input == 'mount':
+if user_input1 == 'mount':
     if is_mounted:
         print('Already mounted silly Master!')
     else:
@@ -36,7 +36,7 @@ if user_input == 'mount':
         else:
             print('No connection to NFS server. Master!')
 
-if user_input == 'unmount':
+if user_input1 == 'unmount':
     if is_mounted:
         if ping_status:
             call(['sudo', 'umount', '/mnt/NFS/plex'])
@@ -55,3 +55,4 @@ if user_input == 'unmount':
             print('NFS Mounts have been forcefully disconnected!')
     else:
         print('NFS Mounts are already disconnected. Master!')
+
