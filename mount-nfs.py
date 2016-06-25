@@ -31,6 +31,7 @@ if user_input == 'mount':
             call(['sudo', 'mount', '-t', 'nfs4', '192.168.1.10:/mnt/tank/backup', '/mnt/NFS/backup'])
             call(['sudo', 'mount', '-t', 'nfs4', '192.168.1.10:/mnt/tank/plex', '/mnt/NFS/plex'])
             call(['sudo', 'mount', '-t', 'nfs4', '192.168.1.10:/mnt/Torrents', '/mnt/NFS/torrents'])
+            call(['sudo', 'mount', '-t', 'nfs4', '192.168.1.10:/mnt/tank/Zene', '/mnt/NFS/Zene'])
             print('NFS Mounts have been connected. Master!')
         else:
             print('No connection to NFS server. Master!')
@@ -42,6 +43,7 @@ if user_input == 'unmount':
             call(['sudo', 'umount', '/mnt/NFS/data'])
             call(['sudo', 'umount', '/mnt/NFS/backup'])
             call(['sudo', 'umount', '/mnt/NFS/torrents'])
+            call(['sudo', 'umount', '/mnt/NFS/Zene'])
             print('NFS Mounts have been disconnected!')
 
         else:
@@ -49,6 +51,7 @@ if user_input == 'unmount':
             call(['sudo', 'umount', '-l', '/mnt/NFS/data'])
             call(['sudo', 'umount', '-l', '/mnt/NFS/backup'])
             call(['sudo', 'umount', '-l', '/mnt/NFS/torrents'])
+            call(['sudo', 'umount', '-l', '/mnt/NFS/Zene'])
             print('NFS Mounts have been forcefully disconnected!')
     else:
         print('NFS Mounts are already disconnected. Master!')
