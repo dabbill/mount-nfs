@@ -27,11 +27,11 @@ if user_input1 == 'mount':
         print('Already mounted silly Master!')
     else:
         if ping_status:
-            call(['sudo', 'mount', '-t', 'nfs4', '192.168.1.10:/mnt/tank/data', '/mnt/NFS/data'])
-            call(['sudo', 'mount', '-t', 'nfs4', '192.168.1.10:/mnt/tank/backup', '/mnt/NFS/backup'])
-            call(['sudo', 'mount', '-t', 'nfs4', '192.168.1.10:/mnt/tank/plex', '/mnt/NFS/plex'])
-            call(['sudo', 'mount', '-t', 'nfs4', '192.168.1.10:/mnt/Torrents', '/mnt/NFS/torrents'])
-            call(['sudo', 'mount', '-t', 'nfs4', '192.168.1.10:/mnt/tank/Zene', '/mnt/NFS/Zene'])
+            call(['sudo', 'mount', '-t', 'nfs', '192.168.1.10:/mnt/tank/data', '/mnt/NFS/data'])
+            call(['sudo', 'mount', '-t', 'nfs', '192.168.1.10:/mnt/tank/backup', '/mnt/NFS/backup'])
+            call(['sudo', 'mount', '-t', 'nfs', '192.168.1.10:/mnt/tank/plex', '/mnt/NFS/plex'])
+            call(['sudo', 'mount', '-t', 'nfs', '192.168.1.10:/mnt/Torrents', '/mnt/NFS/torrents'])
+            call(['sudo', 'mount', '-t', 'nfs', '192.168.1.10:/mnt/tank/Zene', '/mnt/NFS/Zene'])
             print('NFS Mounts have been connected. Master!')
         else:
             print('No connection to NFS server. Master!')
