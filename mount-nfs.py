@@ -15,7 +15,7 @@ user_input1 = str(argv[1])
 
 host = '192.168.1.10'
 mnt = '/mnt/NFS/'
-mount = 'sudo mount -t nfs4'
+mount = 'sudo mount -t nfs'
 unmount = 'sudo umount'
 
 ping_status = server_status(host)
