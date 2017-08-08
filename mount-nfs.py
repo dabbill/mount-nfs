@@ -4,7 +4,6 @@ from os.path import ismount
 from sys import argv
 from subprocess import call
 
-
 def server_status(nfs_host):
     with open('/dev/null', 'a') as out:
         response = call(['ping', '-c1', nfs_host], stdout=out, stderr=out)
@@ -55,4 +54,3 @@ if user_input1 == 'unmount':
             print('NFS Mounts have been forcefully disconnected!')
     else:
         print('NFS Mounts are already disconnected. Master!')
-
